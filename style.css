@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "open-sans", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background: url("assets/fundo.png") no-repeat center;
+    display:flex;
+    background-size: cover;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.profile-card{
+    width: 420px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px #00000070;
+}
+
+.top-section{
+    padding: 60px 40px;
+    background: #2d3436;
+}
+
+.pic{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid #b2bec3;
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+}
+
+
+.pic::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #b2bec3;
+    left:0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    animation: wave 1.5s infinite linear;
+}
+
+@keyframes wave{
+    to{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.name{
+    color: #f1f1f1;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tag{
+    font-size: 18px;
+    color: #b2bec3;
+}
+
+.bottom-section{
+    background: #f1f1f1;
+    padding: 60px 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.social-media{
+    position:absolute;
+    width: 100%;
+    top:-15%;
+    left: 0;
+    z-index: 1;
+}
+
+.social-media i{
+    width: 60px;
+    height: 60px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    color: #222;
+    font-size: 20px;
+    line-height: 60px !important;
+    box-shadow: 0 0 10px #00000070;
+    margin: 0 10px;
+    position: relative;
+}
+
+.social-media i:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    left:0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.4s linear;
+}
+
+@keyframes wave2{
+    to{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.social-media i:hover:after{
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+
+.fa-facebook-f:hover{
+    background-color: #1877f2;
+    color: white;
+}
+
+.fa-instagram:hover{
+    background: linear-gradient(90deg, rgba(214,41,118,1) 32%, rgba(150,47,191,1) 100%);
+    color:white;
+}
+
+.fa-whatsapp:hover{
+    background: linear-gradient(90deg, rgba(7,94,84,1) 32%, rgba(18,140,126,1) 100%);
+    color: white;
+}
+
+.fa-github:hover{
+    background: linear-gradient(90deg, rgba(36,41,46,1) 32%, rgba(43,49,55,1) 100%);
+    color:white;
+}
